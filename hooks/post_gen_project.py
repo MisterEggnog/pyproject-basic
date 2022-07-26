@@ -20,6 +20,12 @@ def remove_main_if_lib():
     if not (is_lib == "y" or is_lib == "Y"):
         os.remove(main_file_path)
 
+def remove_docker_files():
+    add_docker = '{{ cookiecutter.add_docker }}'
+    if not (add_docker == "y" or add_docker == "Y"):
+        os.remove('.dockerignore')
+        os.remove('Dockerfile')
+
 SUCCESS = "\x1b[1;32m"
 INFO = "\x1b[1;33m"
 TERMINATOR = "\x1b[0m"
@@ -28,6 +34,7 @@ TERMINATOR = "\x1b[0m"
 def main():
     set_python_version()
     remove_main_if_lib()
+    remove_docker_files()
     print(SUCCESS + "Project successfully initialized" + TERMINATOR)
 
 
