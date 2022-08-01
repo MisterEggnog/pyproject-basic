@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "25afadddcdb2ad8f48ebf7ae50a08b1d33bf12bc734600b9237d951f5ef95a77"
+            "sha256": "09334088359a80f464fcd09d397bb37f2ba2d8533cf2da3c3e40882e798bf50d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -182,6 +182,14 @@
             ],
             "index": "pypi",
             "version": "==7.1.2"
+        },
+        "pytest-cookies": {
+            "hashes": [
+                "sha256:2e2383c12a321753676c8944fb75b3c8ccac70fce58e27d6b201e1a3ff3dab27",
+                "sha256:94c41ad914d420b57bc31d58ab2c0b103322c11d07d13b8d245c85fa9b069714"
+            ],
+            "index": "pypi",
+            "version": "==0.6.1"
         },
         "python-dateutil": {
             "hashes": [
