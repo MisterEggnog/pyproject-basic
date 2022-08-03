@@ -14,6 +14,13 @@ def set_python_version():
         with open(file_name, "w") as f:
             f.write(contents)
 
+def convert_from_yn(arg):
+    if arg == "y" or arg == "Y":
+        return True
+    if arg == "n" or arg == "N":
+        return False
+    raise RuntimeError("Arg ({arg}) not in format \"yYnN\" this should have been checked before this call.")
+
 def remove_main_if_lib():
     is_lib = '{{ cookiecutter.binary }}'
     main_file_path = os.path.join(repo_name, '__main__.py')
