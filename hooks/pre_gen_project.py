@@ -7,3 +7,10 @@ module_name = "{{ cookiecutter.repo_name }}"
 if not re.match(MODULE_REGEX, module_name):
     print("ERROR: %s is not a valid Python module name!" % module_name)
     sys.exit(1)
+
+def valid_yn_form(arg):
+    return arg in {"n", "N", "y", "Y"}
+
+yn_args = ["{{ cookiecutter.binary }}", "{{ cookiecutter.add_docker }}"]
+for yn in yn_args:
+    valid_yn_form(yn)
