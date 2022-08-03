@@ -11,3 +11,4 @@ def test_no_main_when_passed_n(cookies):
 	result = cookies.bake(extra_context={"binary":"n"})
 	assert not _assert_main_exists(result)
 	result = cookies.bake(extra_context={"binary":"N"})
+	assert not _assert_main_exists(result)
