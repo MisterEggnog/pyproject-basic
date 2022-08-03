@@ -13,4 +13,6 @@ def valid_yn_form(arg):
 
 yn_args = ["{{ cookiecutter.binary }}", "{{ cookiecutter.add_docker }}"]
 for yn in yn_args:
-    valid_yn_form(yn)
+    if not valid_yn_form(yn):
+        print("ERROR: % is not a valid Y/N argument." % yn)
+        sys.exit(1)
