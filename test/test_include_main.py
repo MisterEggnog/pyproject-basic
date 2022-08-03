@@ -8,7 +8,6 @@ def test_includes_main_by_default(cookies):
 	assert _assert_main_exists(result)
 
 def test_no_main_when_passed_n(cookies):
-	result = cookies.bake(extra_context={"binary":"n"})
-	assert not _assert_main_exists(result)
-	result = cookies.bake(extra_context={"binary":"N"})
-	assert not _assert_main_exists(result)
+	for i in ["n", "N"]:
+		result = cookies.bake(extra_context={"binary":i})
+		assert not _assert_main_exists(result)
