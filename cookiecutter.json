@@ -2,5 +2,6 @@
   "project_name": "Best Practices",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "binary":"y",
+  "precommit":"y",
   "add_docker":"n"
 }

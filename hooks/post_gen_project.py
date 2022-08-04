@@ -33,6 +33,11 @@ def remove_docker_files():
         os.remove('.dockerignore')
         os.remove('Dockerfile')
 
+def remove_precommit_file():
+    precommit = convert_from_yn('{{ cookiecutter.precommit }}')
+    if not precommit:
+	    os.remove('.pre-commit-config.yaml')
+
 SUCCESS = "\x1b[1;32m"
 INFO = "\x1b[1;33m"
 TERMINATOR = "\x1b[0m"
@@ -42,6 +47,7 @@ def main():
     set_python_version()
     remove_main_if_lib()
     remove_docker_files()
+    remove_precommit_file()
     print(SUCCESS + "Project successfully initialized" + TERMINATOR)
 
 
