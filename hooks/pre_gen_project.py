@@ -16,3 +16,7 @@ for yn in yn_args:
     if not valid_yn_form(yn):
         print("ERROR: % is not a valid Y/N argument." % yn)
         sys.exit(1)
+
+if '{{ cookiecutter.add_docker }}'.lower() == "n" and '{{ cookiecutter.github_action }}'.lower() == "y":
+    print("ERROR: github action requires docker to be used.")
+    sys.exit(1)
