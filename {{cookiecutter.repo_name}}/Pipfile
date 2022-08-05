@@ -13,6 +13,6 @@ black = "==20.8b1"
 flake8 = "*"
 isort = "*"
 mypy = "*"
-pre-commit = "*"
+{% if cookiecutter.precommit.lower() == "y" %}{{ 'pre-commit = "*"' }}{% endif %}
 pytest = "*"
 pytest-cov = "*"
