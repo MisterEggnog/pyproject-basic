@@ -25,6 +25,10 @@ def _file_contains_precommit(result):
 	pipfile.close()
 	return pip_result
 
-def test_no_precommit_dependecy(cookies):
+def test_no_precommit_dependency(cookies):
+	result = cookies.bake({"precommit":"N"})
+	assert not _file_contains_precommit(result)
+
+def test_precommit_dependency(cookies):
 	result = cookies.bake()
 	assert _file_contains_precommit(result)
