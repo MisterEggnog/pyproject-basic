@@ -40,7 +40,8 @@ def remove_precommit_file():
 	    os.remove('.pre-commit-config.yaml')
 
 def remove_github_action_dir():
-    if True:
+    github = convert_from_yn('{{ cookiecutter.github_action }}')
+    if not github:
         shutil.rmtree('.github')
 
 SUCCESS = "\x1b[1;32m"

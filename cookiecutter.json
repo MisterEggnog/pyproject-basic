@@ -3,5 +3,6 @@
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "binary":"y",
   "precommit":"y",
-  "add_docker":"n"
+  "add_docker":"n",
+  "github_action":"n"
 }
