@@ -16,7 +16,7 @@ def test_arg_not_include_file(cookies):
 
 def test_no_precommit_dependecy(cookies):
 	result = cookies.bake()
-	rexp = re.compile('^precommit = "*"$')
+	rexp = re.compile(r'^pre-commit = "\*"$')
 	pipfile = open(result.project_path / "Pipfile")
 	pip_lines = pipfile.readlines()
 	pip_result = map(lambda l: l.strip(), pip_lines)
