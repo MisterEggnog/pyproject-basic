@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 
 repo_name = '{{cookiecutter.repo_name }}'
 
@@ -38,6 +39,10 @@ def remove_precommit_file():
     if not precommit:
 	    os.remove('.pre-commit-config.yaml')
 
+def remove_github_action_dir():
+    if True:
+        shutil.rmtree('.github')
+
 SUCCESS = "\x1b[1;32m"
 INFO = "\x1b[1;33m"
 TERMINATOR = "\x1b[0m"
@@ -48,6 +53,7 @@ def main():
     remove_main_if_lib()
     remove_docker_files()
     remove_precommit_file()
+    remove_github_action_dir()
     print(SUCCESS + "Project successfully initialized" + TERMINATOR)
 
 
