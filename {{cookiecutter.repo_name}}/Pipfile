@@ -16,3 +16,4 @@ mypy = "*"
 {% if cookiecutter.precommit.lower() == "y" %}{{ 'pre-commit = "*"' }}{% endif %}
 pytest = "*"
 pytest-cov = "*"
+pdoc = "*"
