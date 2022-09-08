@@ -1,5 +1,5 @@
 {
-  "project_name": "Best Practices",
+  "project_name": "pyproject",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "binary":"y",
   "precommit":"y",
