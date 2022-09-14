@@ -1,6 +1,5 @@
-# Python Best Practices Cookiecutter
-
-Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template as described in this [blogpost](https://sourcery.ai/blog/python-best-practices/).
+# Basic pipenv python project
+Based on the [python best practice blogpost](https://sourcery.ai/blog/python-best-practices/) by [sourcery.ai](sourcery.ai).
 
 ## Features
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
